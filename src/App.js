@@ -5,6 +5,7 @@ import p from './assets/build/generic/web/1.pdf'
 import p1 from './assets/build/generic/web/2.pdf'
 import p2 from './assets/build/generic/web/3.pdf'
 import { pdfjs } from 'react-pdf';
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 export default class App extends Component {
   state = {
@@ -58,7 +59,6 @@ export default class App extends Component {
     this.toFullVideo(el)
   }
   click_left_item = (i) => {
-    const { currentpage } = this.state
     // this.$('center_c').removeEventListener('scroll', this.cc);
 
     this.setState({
@@ -71,7 +71,7 @@ export default class App extends Component {
 
     this.scrollIntoView_c(i)
     // this.$('center_c').addEventListener('scroll', this.cc);
-    this.setState({scrol_flag:true})
+    this.setState({ scrol_flag: true })
 
   }
   enter_c = (e) => {
@@ -171,7 +171,7 @@ export default class App extends Component {
 
   }
   content_scroll_c = (el) => {
-    const { currentpage } = this.state
+
     el.addEventListener('scroll', this.cc)
   }
   cavas_node_height_arr = () => {
@@ -211,7 +211,10 @@ export default class App extends Component {
 
     const { totalPage, scalcnum, currentpage, filesrc, input_c_val } = this.state
     return (
+      
       <div className='wrap_c_big'>
+
+        {/* <Pagination onChange={handelOnChange} total={totalPage * 10} current={page} /> */ }
         <div className='header_c'>
           <span onClick={() => {
             this.prevclick_c()
@@ -311,4 +314,3 @@ export default class App extends Component {
 
 
 
-{/* <Pagination onChange={handelOnChange} total={totalPage * 10} current={page} /> */ }
