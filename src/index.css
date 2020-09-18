@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wrap_c_big {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 99%;
+}
+
+/* 头部 */
+
+.header_c {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_c>span {
+  flex: 1;cursor: pointer;
+}
+.header_c>span>.input_c {
+  height: 30px;padding-left: 10px;
+}
+/* 内容 */
+
+.content_wrap_c {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 40px);
+}
+
+/* 左侧 */
+
+.content_wrap_c>.left_c {
+  flex: 1;
+  min-width: 100px;
+  height: 100%;
+  overflow: auto;
+}
+
+.content_wrap_c>.left_c>.ol_c {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content_wrap_c>.left_c>.ol_c>li {
+  background: #ccc;
+  width: 100%;
+  margin: 12px;
+  height: 128px;
+  text-align: center;
+  cursor: pointer;
+  /* line-height: 128px; */
+}
+
+.left_c_item_active{
+   border: 3px solid #000;
+}
+/* 中间  */
+
+.content_wrap_c>.center_c {
+  flex: 10;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.content_wrap_c>.center_c>.Document_wrap_c {
+  display: block;
+
+}
+
+/* 右侧 */
+
+.content_wrap_c>.right_c {
+  flex: 1;
+  min-width: 100px;
+  height: 100%;
+  overflow: auto;
+}
+
+.content_wrap_c>.right_c>.ul_c {
+  width: 100%;
+  height: 100%;
+}
+
+.content_wrap_c>.right_c>.ul_c>li {
+  background: #ee4488;
+  width: 100%;
+  margin: 12px;
+  height: 44px;
+  text-align: center;
+cursor: pointer;
+  line-height: 44px;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.fill_screen_c{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;background: #000;
+}
